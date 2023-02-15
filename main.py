@@ -1,7 +1,24 @@
-def say_hello(user_name, user_age):
-    print("hello", user_name)
-    print("you are", user_age, "years old")
+def make_juice(fruit):
+    return f"{fruit}+🥤"
 
 
-say_hello("nico", 12)
-say_hello("kyusung", 18)
+def add_ice(juice):
+    return f"{juice}+🧊"
+
+
+def add_sugar(iced_juice):
+    return f"{iced_juice}+🍬"
+
+
+juice = make_juice("🍎")
+cold_juice = add_ice(juice)
+perfect_juice = add_sugar(cold_juice)
+print(perfect_juice)
+
+winner = 15
+if winner > 10:
+    print("winner is greater tan 10")
+elif winner < 10:
+    print("winner is less than 10")
+else:
+    print("winner is 10")
