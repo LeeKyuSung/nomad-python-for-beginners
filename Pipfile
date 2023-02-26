@@ -11,6 +11,7 @@ idna = "==3.4"
 urllib3 = "==1.26.14"
 bs4 = "*"
 selenium = "*"
+flask = "*"
 
 [dev-packages]
 autopep8 = "*"
