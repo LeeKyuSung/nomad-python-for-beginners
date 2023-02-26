@@ -4,9 +4,14 @@ from extractors.wwr import extract_wwr_jobs
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-browser = webdriver.Chrome()
-browser.get("https://www.indeed.com/jobs?q=python&l=Remote&limit=50")
-# print(browser.page_source)
+keyword = input("What do you want to search? ")
+wwr = extract_wwr_jobs(keyword)
+jobs = wwr
 
-file = open("indeed.html", "w")
-file.write(browser.page_source)
+file = open(f"{keyword}.csv", mode="w")
+file.write("title,company,region,position")
+
+for job in jobs:
+    file.write(f"{job['title']},{job['company']},{job['region']},{job['position']}\n")
+
+file.close()
