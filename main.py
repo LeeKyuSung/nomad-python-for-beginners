@@ -6,4 +6,7 @@ from selenium.webdriver.chrome.options import Options
 
 browser = webdriver.Chrome()
 browser.get("https://www.indeed.com/jobs?q=python&l=Remote&limit=50")
-print(browser.page_source)
+# print(browser.page_source)
+
+file = open("indeed.html", "w")
+file.write(browser.page_source)
