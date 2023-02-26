@@ -10,6 +10,7 @@ charset-normalizer = "==3.0.1"
 idna = "==3.4"
 urllib3 = "==1.26.14"
 bs4 = "*"
+selenium = "*"
 
 [dev-packages]
 autopep8 = "*"
